@@ -1,3 +1,7 @@
+head{
+    display: none;
+}
+
 body{
     background-color: #E59E56;
     text-align: center;
@@ -5,14 +9,29 @@ body{
     margin: 0;
     padding: 2rem 0;
     width: 100%;
-}
+    }
 main {
     background: white;
     width: 90%;
     margin: auto;
     border-radius: 5px;
     padding: 2rem 0;
-  }
-  h1 {
+    }
+h1 {
       margin: 3rem 1rem 6rem 1 rem;
+      display:block;
   }
+h2 {
+    margin:auto 2rem;
+}
+.artObject {
+    max-width: 80%;
+    max-height: 20rem;
+    margin: 1rem;
+            }
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+        }
