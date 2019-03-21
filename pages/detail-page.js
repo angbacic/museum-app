@@ -33,7 +33,7 @@ function submitComment() {
         return true;
     }
     if (name[0]!== name[0].toUpperCase()){
-        return name[0].toLowerCase();
+        return name[0]===name[0].toUpperCase();
     }
 
 
