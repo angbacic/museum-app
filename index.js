@@ -323,15 +323,6 @@ const data = {
       }
     ]
   }
-// let paintings= data.artObjects;
-// for (i=0; i<paintings.length; i++){
-//     console.log(paintings[i])
-// }
-
-//  const newATag=document.createElement('a')
-//  const newImg=document.createElement('img')
-//  newATag.href=('./pages/detail-page.html')
-
 
 
 // const galleryLocation=document.getElementById('gallery')
@@ -348,48 +339,31 @@ const data = {
 
 
 
-// function showPaintings () {
-//     for (const art of paintings){
-//       console.log(art.title);
+
+//function displayPainting(painting)
    
-      // create img
-      const newImg = document.createElement('img')
-        //give it an url--found through console
-      const url=data.artObjects[0].webImage.url   
-   // assign the url to the image
-      newImg.src= url
+    //const anchor=document.createElement('a')
+    // //anchor.href='./pages7detail-page.html'
+    // anchor.appendChild(newImg)
 
-      const gallery =document.getElementById('gallery')
-       gallery.appendChild(newImg)
+    // const gallery =document.getElementById('gallery')
+    // gallery.appendChild(newImg)
 
-      console.log(newImg)
-
-  for (let index=0;index<data.artObjects.length; index++){
-      const element=data.artObjects[index];
-      const newImg = document.createElement('img')
-        //give it an url--found through console
-      const url=data.artObjects[index].webImage.url   
-   // assign the url to the image
-      newImg.src= url
-
-      const gallery =document.getElementById('gallery')
-       gallery.appendChild(newImg)
-
+  
+function display(image){
+     const newImg = document.createElement('img')  
+     const url=image.webImage.url    
+     newImg.src= url
+     
+     const anchor=document.createElement('a')
+     anchor.href='./pages/detail-page.html'
+     anchor.appendChild(newImg)
+    
+     const gallery =document.getElementById('gallery')
+     gallery.appendChild(anchor)
   }
 
-//       // set alt
-//       newImg.alt = art.title
-//       // set class to artObject
-//         newImg.classList.add('artObject')
-//       // set src to painting url (art.???)
-//     newImg.setAttribute('alt','title of the painting')
-//       // create anchor
-//       const anchor = document.createElement('a')
-//       // set the href to ./pages etc
-   
-//       anchor.appendChild(img)
-   
-//       console.log(anchor)
-//       // append anchor to the document
-//     }
-//    }
+  for (let index=0;index<data.artObjects.length; index++){
+    const painting =data.artObjects[index];
+    display(painting)
+  }
