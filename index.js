@@ -325,34 +325,10 @@ const data = {
   }
 
 
-// const galleryLocation=document.getElementById('gallery')
-//  galleryLocation.appendChild(newImg)
-
-
-// let images=['img1','img2','img3','img4','img5']
-// for (let i=0; i<images.length; i++){
-//     let image=document.createElement('img');
-//     image.className= 'artObject';
-//     image.setAttribute=[['src','https://learnodo-newtonic.com/wp-content/uploads/2017/02/Soft-Construction-with-Boiled-Beans-1936-Salvador-Dali.jpg'],['src','https://imgc.artprintimages.com/img/print/the-temptation-of-st-anthony-c-1946_u-l-e77zg0.jpg?h=550&w=550'],['src','https://www.dhresource.com/0x0s/f2-albu-g7-M00-40-2F-rBVaSVu8lNKAfZspAAKG_9N3CNo776.jpg/100-pintado-a-mano-salvador-dali-art-pintura.jpg']];
-//     document.body.appendChild(image);
-// }
-
-
-
-
-//function displayPainting(painting)
-   
-    //const anchor=document.createElement('a')
-    // //anchor.href='./pages7detail-page.html'
-    // anchor.appendChild(newImg)
-
-    // const gallery =document.getElementById('gallery')
-    // gallery.appendChild(newImg)
-
   
-function display(image){
+function displayPainting(painting){
      const newImg = document.createElement('img')  
-     const url=image.webImage.url    
+     const url=painting.webImage.url    
      newImg.src= url
      
      const anchor=document.createElement('a')
@@ -364,6 +340,6 @@ function display(image){
   }
 
   for (let index=0;index<data.artObjects.length; index++){
-    const painting =data.artObjects[index];
-    display(painting)
+    const currentPainting =data.artObjects[index];
+    displayPainting(currentPainting)
   }
